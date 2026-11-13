@@ -1,354 +1,430 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bhumika Mallikarjun Horapet — Founding Engineer & Data Scientist. A portfolio shot on film.">
+    <title>Bhumika · Datographer</title>
 
-        <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,800;1,9..144,300;1,9..144,600&family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/darkroom.css">
+</head>
+<body>
+    <!-- ===== SHUTTER INTRO ===== -->
+    <div class="shutter" id="shutter" aria-hidden="true">
+        <div class="shutter__blades">
+            <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="shutter__label">LOADING FILM · ISO 400</div>
+    </div>
+    <div class="flash" id="flash" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="reticle" id="reticle" aria-hidden="true"><span></span></div>
 
-        <!-- =====BOX ICONS===== -->
-        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <!-- ===== NAV ===== -->
+    <header class="nav" id="nav">
+        <a href="#home" class="nav__logo">
+            <span class="nav__rec"></span> BMH<span class="nav__logo-dim">/studio</span>
+        </a>
+        <nav class="nav__menu" id="nav-menu">
+            <a href="#about" class="nav__link"><em>01</em> About</a>
+            <a href="#skills" class="nav__link"><em>02</em> Lens Kit</a>
+            <a href="#work" class="nav__link"><em>03</em> Exposures</a>
+            <a href="#project" class="nav__link"><em>04</em> Gallery</a>
+            <a href="#education" class="nav__link"><em>05</em> Education</a>
+            <a href="#contact" class="nav__link"><em>06</em> Contact</a>
+        </nav>
+        <div class="nav__counter" title="Frames shot"><i class='bx bx-camera'></i> <span id="frame-count">01</span>/36</div>
+        <button class="nav__toggle" id="nav-toggle" aria-label="Open menu"><i class='bx bx-menu'></i></button>
+    </header>
 
-        <title>Bhumika's Portfolio</title>
-    </head>
-    <body>
-        <!--===== HEADER =====-->
-        <header class="l-header">
-            <nav class="nav bd-grid">
-                <div>
-                    <a href="#" class="nav__logo">Bhumika Mallikarjun Horapet</a>
+    <main>
+        <!-- ===== HERO / VIEWFINDER ===== -->
+        <section class="hero" id="home">
+            <div class="viewfinder">
+                <span class="vf-corner tl"></span><span class="vf-corner tr"></span>
+                <span class="vf-corner bl"></span><span class="vf-corner br"></span>
+                <div class="vf-top">
+                    <span class="vf-rec">● REC</span>
+                    <span>4K · 24fps</span>
+                    <span class="vf-batt"><i class='bx bxs-battery-full'></i> 100%</span>
                 </div>
 
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                        <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                        <li class="nav__item"><a href="#project" class="nav__link">Project</a></li>
-                        <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
-                </div>
-            </nav>
-        </header>
-
-        <main class="l-main">
-            <!--===== HOME =====-->
-            <section class="home bd-grid" id="home">
-                <div class="home__data">
-                    <h1 class="home__title"><br> <span class="home__title-color" >Bhumika Mallikarjun Horapet</span><br> </h1>
-                    <span style="font-size: medium; row-gap: 2rem;">Founding Engineer &amp; Data Scientist at TruVana Services<br>M.S. Data Science, The George Washington University</span>
-                </div>
-
-                <div class="home__social">
-                    <a href="https://www.linkedin.com/in/bhumikamh/" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://github.com/bhumika-1815" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-                </div>
-
-                <div class="home__img">
-                    <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home__blob-img" x="-30" y="-320" href="assets/img/file2.png"/>
-                        </g>
-                    </svg>
-                </div>
-            </section>
-
-            <!--===== ABOUT =====-->
-            <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
-
-                <div class="about__container bd-grid">
-                    <div class="about__img">
-                        <img src="assets/img/Bhu.JPG" alt="">
-                    </div>
-                    
-                    <div>
-                        <h2 class="about__subtitle">I'am Bhumika,</h2>
-                        <p class="about__text" style="text-align:justify;">Founding Engineer and Data Scientist with 3+ years of experience building and shipping AI/ML systems end to end — from deep learning (CNN classification, TensorFlow) and LLM fine-tuning and evaluation (PyTorch, Hugging Face Transformers) to agentic orchestration and retrieval (RAG, multi-agent pipelines). I currently own the AI/ML model-development side of a full-stack AI platform as an early technical hire, working through ambiguity to train, evaluate, and deploy models against real business constraints. Strong Python fundamentals with production experience in FastAPI, cloud infrastructure across AWS and Azure, and full-stack systems, plus a self-directed, research-minded approach to picking up new technical domains quickly.</p>
-                    </div>                                   
-                </div>
-            </section>
-
-            <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
-                <h2 class="section-title">Technical Skills</h2>
-            
-                <div class="skills__container bd-grid">          
-                    <div class="skills__data">
-                        <div>
-                            <span class="skills__names">PROGRAMMING LANGUAGES</span>
-                            <p class="about__text">Python (Pandas, NumPy, Scikit-learn, OpenCV), SQL, R, Java, JavaScript, TypeScript, HTML, CSS</p>
+                <div class="hero__grid">
+                    <div class="hero__text">
+                        <p class="hero__kicker">Now showing — a portfolio shot on film</p>
+                        <h1 class="hero__title">
+                            <span class="line">Bhumika</span>
+                            <span class="line line--italic">Mallikarjun</span>
+                            <span class="line">Horapet</span>
+                        </h1>
+                        <p class="hero__role">Founding Engineer &amp; Data Scientist at <strong>TruVana Services</strong><br>M.S. Data Science, The George Washington University</p>
+                        <div class="hero__cta">
+                            <a href="#project" class="btn btn--red"><i class='bx bx-play'></i> View the gallery</a>
+                            <a href="#contact" class="btn btn--ghost"><i class='bx bx-envelope'></i> Book a shoot</a>
+                        </div>
+                        <div class="hero__social">
+                            <a href="https://www.linkedin.com/in/bhumikamh/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                            <a href="https://github.com/bhumika-1815" target="_blank" rel="noopener" aria-label="GitHub"><i class='bx bxl-github'></i></a>
                         </div>
                     </div>
-                    <div class="skills__data">
-                        <div>
-                            <span class="skills__names">ML &amp; DEEP LEARNING</span>
-                            <p class="about__text">PyTorch, TensorFlow, Keras, Hugging Face Transformers, Scikit-learn, XGBoost, CNNs, LLM Fine-Tuning &amp; Evaluation</p>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div>
-                            <span class="skills__names">AGENTIC AI &amp; LLMS</span>
-                            <p class="about__text">RAG, Multi-Agent Orchestration, Multi-Model Routing, LLM Integration (Anthropic Claude / OpenAI), LangChain, LangGraph, ChromaDB, Claude Code</p>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div>
-                            <span class="skills__names">MACHINE LEARNING TECHNIQUES</span>
-                            <p class="about__text">Classification, Regression, Clustering, Natural Language Processing, Computer Vision, Feature Engineering, Predictive Modeling, Hypothesis Testing</p>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div>
-                            <span class="skills__names">FULL-STACK &amp; INFRASTRUCTURE</span>
-                            <p class="about__text">FastAPI, React, REST APIs, Microservices, Docker, Kubernetes, Git / CI-CD, Streamlit</p>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div>
-                            <span class="skills__names">CLOUD PLATFORMS</span>
-                            <p class="about__text">AWS (S3, Glue, Athena, Lambda, Redshift, RDS, CloudWatch, Batch), Azure (Azure ML), GCP</p>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div>
-                            <span class="skills__names">DATA &amp; DATABASES</span>
-                            <p class="about__text">ETL / ELT Pipelines, PostgreSQL, MySQL, SQL Server, MongoDB, Neo4j, Snowflake, Databricks</p>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div>
-                            <span class="skills__names">DATA VISUALIZATION</span>
-                            <p class="about__text">Tableau, Power BI (DAX), Looker, Matplotlib, Seaborn, ArcGIS Online / Pro &amp; Dashboards, Excel</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <!--===== WORK =====-->
-            <section class="section" id="work">
-                <h2 class="section-title">Professional Experience</h2>
-              
-                <div class="experience__container">
-                  <div class="experience__item">
-                    <div class="experience__title">FOUNDING ENGINEER</div>
-                    <div class="experience__company">TRUVANA SERVICES, Virginia, USA | April 2026 - Present</div>
-                    <ul class="experience__details" style="text-align: justify;">
-                      <li>Own the AI/ML model-development side of a full-stack AI-powered platform built from scratch (Python FastAPI, React, MySQL), integrating LLM capabilities with Anthropic Claude and setting technical direction as a founding technical hire.</li>
-                      <li>Built multi-agent orchestration and retrieval systems (RAG, multi-model routing) using Claude and Claude Code, applying agentic AI as a core capability within a production system.</li>
-                      <li>Designed cloud infrastructure across AWS and Azure to support model training, deployment, and inference at scale, including API resilience frameworks with automated fallback mechanisms for production reliability.</li>
-                      <li>Collaborate with product and engineering stakeholders to integrate AI/ML solutions in a scalable, maintainable way while staying current on advances in generative AI.</li>
-                    </ul>
-                  </div>
 
-                  <div class="experience__item">
-                    <div class="experience__title">DATA SCIENTIST CONSULTANT</div>
-                    <div class="experience__company">INTERNATIONAL FINANCE CORPORATION (IFC - World Bank Group), Washington, DC | March 2025 - May 2026</div>
-                    <ul class="experience__details" style="text-align: justify;">
-                      <li>Built and validated machine learning models across 8 emerging market portfolios, improving forecast accuracy by 15–20% through iterative model training and evaluation against real-world constraints.</li>
-                      <li>Delivered data-driven investment intelligence for Malawi's tourism sector by analyzing economic indicators across 15+ regional datasets, identifying 3 high-growth corridors projected to generate 20% higher ROI.</li>
-                      <li>Conducted exploratory and inferential statistical analyses across 10+ financial and operational datasets (500K+ records), delivering 12 actionable reports across 3 Sub-Saharan African markets.</li>
-                    </ul>
-                  </div>
+                    <div class="hero__photo">
+                        <div class="hero__frame">
+                            <img src="assets/img/bhumika-hero.jpg" alt="Portrait of Bhumika">
+                            <div class="focus-box"><span></span></div>
+                        </div>
+                        <div class="hero__tag">SUBJECT LOCKED · AF-C</div>
+                    </div>
+                </div>
 
-                  <div class="experience__item">
-                    <div class="experience__title">DATA ENGINEER</div>
-                    <div class="experience__company">INFOSYS, Bangalore, India | May 2022 - July 2023</div>
-                    <ul class="experience__details" style="text-align: justify;">
-                      <li>Built ML-powered anomaly detection models using Python (Scikit-learn, Isolation Forest) for real-time fraud pattern identification across 50K+ daily banking transactions, deploying and monitoring models in production.</li>
-                      <li>Engineered scalable ETL workflows and SQL-based analytics for banking data, processing 50K+ daily transactions with 99.5% pipeline reliability and reducing data latency by 30%.</li>
-                      <li>Developed SQL and Python automation for trend detection across 8 recurring workflows, cutting manual reporting effort by ~40 hrs/month and increasing delivery efficiency by 25%.</li>
-                      <li>Boosted client data processing capabilities by developing .NET-based microservice generators and maintaining micro frontends in an Angular environment for improved modularity.</li>
-                      <li>Employed Agile methodologies and cross-functional communication across development, QA, and project management to deliver technical solutions on schedule.</li>
-                      <span style="font-weight: bold;">Achievements</span>
-                      <li>INSTA Award: Honored with the INSTA Award for exceptional contributions to the improvement and ramp-up of microservices modules and API Gateways.</li>
-                    </ul>
-                  </div>
-
-                  <div class="experience__item">
-                    <div class="experience__title">JUNIOR DATA SCIENTIST</div>
-                    <div class="experience__company">TECHNOLOGICS, Bangalore, India | January 2021 - December 2021</div>
-                    <ul class="experience__details" style="text-align: justify;">
-                      <li>Designed and trained supervised and deep learning models (TensorFlow, Keras), improving inference speed from 5s to 0.2s compared to manual workflows.</li>
-                      <li>Researched and analyzed cloud computing architectures and identified optimization opportunities, collaborating with cross-functional teams to implement improvements.</li>
-                      <li>Communicated complex technical findings to diverse stakeholders through comprehensive analysis and presentations.</li>
-                    </ul>
-                  </div>
+                <div class="vf-bottom">
+                    <span>f/<b id="aperture">1.8</b></span>
+                    <span>1/<b>250</b></span>
+                    <span>ISO <b>400</b></span>
+                    <span class="meter" aria-hidden="true"><i>-2</i><i>·</i><i>-1</i><i>·</i><b>0</b><i>·</i><i>+1</i><i>·</i><i>+2</i></span>
+                    <span>[<b>36</b>]</span>
                 </div>
-              </section>
-
-
-        <!--===== PROJECT =====-->
-        <section class="section" id="project">
-            <h2 class="section-title">Project Experience</h2>
-            <div class="work__container bd-grid">
-              <div class="work__img">
-               <a href="https://github.com/bhumika-1815/clinical-ai-agent"><img src="assets/img/work3.jpg" alt="Clinical Decision Support Agent"></a>
-                <div class="work__details">
-                  <h3>Clinical Decision Support Agent (Agentic AI, RAG)</h3>
-                  <p>August 2025</p>
-                  <ul>
-                    <li>Built a 5-agent AI pipeline and RAG system (LangGraph, ChromaDB, Hugging Face) to analyze large, unstructured clinical datasets and predict 30-day readmission risk, achieving an AUC-ROC of 0.867.</li>
-                    <li>Shipped the model as a production, interactive Streamlit application for stakeholder use.</li>
-                  </ul>
-                    <section class="contact" type="button">
-                        <a href="https://github.com/bhumika-1815/clinical-ai-agent" class="contact__button button" target="_blank"><span style="color: white;">GitHub</span></a>
-                    </section>
-                </div>
-              </div>
-              <div class="work__img">
-               <a href="https://github.com/bhumika-1815/Capstone_Project_2025"><img src="assets/img/work2.jpg" alt="Geospatial Analysis of COVID-19 Inequity in NYC"></a>
-                <div class="work__details">
-                  <h3>Geospatial Analysis of COVID-19 Inequity in New York City</h3>
-                  <p>May 2025</p>
-                  <ul>
-                    <li>Performed spatial and statistical analyses in ArcGIS Pro and Python, integrating NYC case data by ZCTA with U.S. Census demographics including median income and population density.</li>
-                    <li>Revealed that low-income neighborhoods had 25–30% higher case densities, and presented findings to stakeholders as a capstone deliverable.</li>
-                  </ul>
-                    <section class="contact" type="button">
-                        <a href="https://github.com/bhumika-1815/Capstone_Project_2025" class="contact__button button" target="_blank"><span style="color: white;">GitHub</span></a>
-                    </section>
-                </div>
-              </div>
-              <div class="work__img">
-               <img src="assets/img/work1.jpg" alt="Customer Complaint Analysis & Prediction System">
-                <div class="work__details">
-                  <h3>Customer Complaint Analysis &amp; Prediction System (NLP)</h3>
-                  <p>2024</p>
-                  <ul>
-                    <li>Fine-tuned transformer models (DistilBERT, RoBERTa, BERT, T5, BART) using PyTorch and Hugging Face Transformers for complaint classification, summarization, sentiment analysis, and response-quality prediction on consumer complaint data.</li>
-                    <li>Applied cross-validation, weighted loss functions, and learning-rate scheduling to optimize F1 and ROUGE scores as part of a 4-person NLP research team.</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="work__img">
-               <a href="https://github.com/bhumika-1815/Bridging-the-Gap"><img src="assets/img/Housingimage.jpg" alt="Bridging the Gap"></a>
-                <div class="work__details">
-                  <h3>Bridging the Gap: The Impact of Wages and Housing Markets on U.S. Financial Stability</h3>
-                  <p>May 2024</p>
-                  <ul>
-                    <li>Conducted a comprehensive analysis of U.S. financial stability, focusing on wage policies, housing affordability, and economic resilience during recessions, utilizing datasets from the Federal Reserve Bank of St. Louis and advanced data visualization techniques in Tableau.
-                    </li>
-                    <br>
-                  </ul>
-                    <section class="contact" type="button">
-                        <a href="https://github.com/bhumika-1815/Bridging-the-Gap" class="contact__button button" target="_blank"><span style="color: white;">GitHub</span></a>
-                    </section>
-                </div>
-              </div>
-              <div class="work__img">
-               <a href="https://github.com/bhumika-1815/Human-Action-Recognition-CNN"><img src="assets/img/humanaction.webp" alt="Human Action Recognition using CNN"></a>
-                <div class="work__details">
-                  <h3>Human Action Recognition using Convolution Neural Networks</h3>
-                  <p>May 2024</p>
-                  <ul>
-                    <li>Engineered a Convolutional Neural Network (CNN) model using TensorFlow for Human Action Recognition, achieving 66.75% classification accuracy on 12,000 images by applying advanced data preprocessing techniques.</li>
-                  </ul>
-                  <section class="contact" type="button">
-                    <a href="https://github.com/bhumika-1815/Human-Action-Recognition-CNN" class="contact__button button" target="_blank"><span style="color: white;">GitHub</span></a>
-                </section>
-                </div>
-              </div>
-              <div class="work__img">
-                <a href="https://github.com/bhumika-1815/AWS-Youtube-Analytics-Pipeline"><img src="assets/img/aws.jpg" alt="AWS YouTube Video Analytics Pipeline"></a>
-                <div class="work__details">
-                  <h3>AWS YouTube Video Analytics Pipeline</h3>
-                  <p>April 2024</p>
-                  <ul>
-                    <li>Led the design and deployment of an end-to-end data processing and analytics pipeline on AWS, integrating services like S3, Glue, Lambda, Athena, and Quick Sight for comprehensive data management, transformation, and visualization, enhancing data-driven decision-making capabilities.</li>
-                    <br>
-                  </ul>
-                  <section class="contact" type="button">
-                    <a href="https://github.com/bhumika-1815/AWS-Youtube-Analytics-Pipeline" class="contact__button button" target="_blank"><span style="color: white;">GitHub</span></a>
-                </section>
-                </div>
-              </div>
-              <div class="work__img">
-                <a href="https://github.com/bhumika-1815/Wine-Quality-Prediction-Project"><img src="assets/img/wine.jpg" alt="Wine Quality Prediction"></a>
-                <div class="work__details">
-                  <h3>Wine Quality Prediction</h3>
-                  <p>December 2023</p>
-                  <ul>
-                    <li>Developed R-based machine learning model to predict red and white wine quality ratings; applied exploratory data analysis (EDA), statistical tests, and advanced modeling techniques.</li>
-                    <li>Produced comprehensive report summarizing data insights, modeling approach, results, and recommendations.</li>
-                  </ul>
-                  <section class="contact" type="button">
-                    <a href="https://github.com/bhumika-1815/Wine-Quality-Prediction-Project" class="contact__button button" target="_blank"><span style="color: white;">GitHub</span></a>
-                </section>
-                </div>
-              </div>
-              <!-- <div class="work__img">
-                <img src="assets/img/work5.jpg" alt="">
-                <div class="work__details">
-                  <h3>Vehicle Insurance Fraud Detection</h3>
-                  <p>December 2023</p>
-                  <ul>
-                    <li>Built Python-based machine learning model to detect fraudulent insurance claims by analyzing prior patterns and client data; applied SMOTE oversampling, XGBoost classification, and SHAP value analysis.</li>
-                    <li>Improved performance of model using machine learning techniques, data processing, and feature selection optimization to significantly decrease number of false positives and negatives.</li>
-                  </ul>
-                  <a href="https://github.com/yourgithubprofile/project5" target="_blank">GitHub Link</a>
-                </div>
-              </div> -->
             </div>
-          </section>
+            <a href="#about" class="scroll-cue">scroll to advance film <i class='bx bx-chevron-down'></i></a>
+        </section>
 
+        <!-- ===== ABOUT / POLAROID + EXIF ===== -->
+        <section class="section about" id="about">
+            <header class="section__head">
+                <span class="section__num">01</span>
+                <h2 class="section__title">About the <em>datographer</em></h2>
+                <p class="hero__tagline" style="margin-top:.8rem;">“I develop raw data into sharp insights.”</p>
+            </header>
 
-        
-            <!--===== EDUCATION =====-->
-            <section class="section" id="education">
-                <h2 class="section-title">Education</h2>
+            <div class="about__grid">
+                <div class="about__body reveal">
+                    <p class="about__lead">I build AI systems the way a photographer builds a shot — <em>frame the problem, find the light, focus, expose.</em></p>
+                    <p class="about__text">Founding Engineer and Data Scientist with 3+ years of experience building and shipping AI/ML systems end to end — from deep learning (CNN classification, TensorFlow) and LLM fine-tuning and evaluation (PyTorch, Hugging Face Transformers) to agentic orchestration and retrieval (RAG, multi-agent pipelines). I currently own the AI/ML model-development side of a full-stack AI platform as an early technical hire, working through ambiguity to train, evaluate, and deploy models against real business constraints. Strong Python fundamentals with production experience in FastAPI, cloud infrastructure across AWS and Azure, and full-stack systems, plus a self-directed, research-minded approach to picking up new technical domains quickly.</p>
 
-                <div class="experience__container">
-                  <div class="experience__item">
-                    <div class="experience__title">MASTER OF SCIENCE, DATA SCIENCE — GPA 3.8</div>
-                    <div class="experience__company">The George Washington University, Washington, DC | Graduated May 2025</div>
-                    <p class="about__text" style="text-align:justify;">Coursework: Machine Learning, Data Visualization, Cloud Computing, Data Warehousing, Data Mining, Natural Language Processing, Applied Computing in Health Data, GIS.</p>
-                  </div>
+                    <dl class="exif">
+                        <div><dt>Camera</dt><dd>Founding Engineer, TruVana</dd></div>
+                        <div><dt>Lens</dt><dd>Data Science · AI/ML</dd></div>
+                        <div><dt>Exposure</dt><dd>3+ years</dd></div>
+                        <div><dt>Location</dt><dd>San Jose, CA</dd></div>
+                        <div><dt>Film</dt><dd>Python / PyTorch / LLMs</dd></div>
+                        <div><dt>Developed at</dt><dd>GWU · M.S. 3.8</dd></div>
+                    </dl>
                 </div>
-            </section>
-
-            <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
-                <h2 class="section-title">Contact</h2>
-
-                <div class="contact__container bd-grid">
-                    <!-- <form action="" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Enviar" class="contact__button button">
-                    </form> -->
-                    <h2 class="about__subtitle">Bhumika Mallikarjun Horapet</h2>
-                    <p class="about__text" style="text-align:justify;">Email: bhumikahorpet@gmail.com</p> 
-                    <p class="about__text" style="text-align:justify;">Washington, DC</p>
-                    <p class="about__text" style="text-align:justify;">Mobile: +1 (571) 547-9418</p>
-                    <p class="about__text" style="text-align:justify;"><a href="https://www.linkedin.com/in/bhumikamh/">LinkedIn</a> | <a href="https://github.com/bhumika-1815">GitHub</a></p>      
-                </div>
-            </section>
-        </main>
-
-        <!--===== FOOTER =====-->
-        <footer class="footer">
-            <p class="footer__title"></p>
-            <div class="footer__social">
             </div>
-        </footer>
+        </section>
 
+        <!-- ===== SKILLS / LENS KIT ===== -->
+        <section class="section skills" id="skills">
+            <header class="section__head">
+                <span class="section__num">02</span>
+                <h2 class="section__title">The <em>lens kit</em></h2>
+                <p class="section__sub">Every shot needs the right glass. Hover a lens to focus.</p>
+            </header>
 
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
+            <div class="lens-grid">
+                <article class="lens reveal" data-focal="35mm">
+                    <div class="lens__ring"><i class='bx bx-code-alt'></i></div>
+                    <h3>Programming Languages</h3>
+                    <p>Python (Pandas, NumPy, Scikit-learn, OpenCV), SQL, R, Java, JavaScript, TypeScript, HTML, CSS</p>
+                </article>
+                <article class="lens reveal" data-focal="50mm">
+                    <div class="lens__ring"><i class='bx bx-brain'></i></div>
+                    <h3>ML &amp; Deep Learning</h3>
+                    <p>PyTorch, TensorFlow, Keras, Hugging Face Transformers, Scikit-learn, XGBoost, CNNs, LLM Fine-Tuning &amp; Evaluation</p>
+                </article>
+                <article class="lens reveal" data-focal="85mm">
+                    <div class="lens__ring"><i class='bx bx-bot'></i></div>
+                    <h3>Agentic AI &amp; LLMs</h3>
+                    <p>RAG, Multi-Agent Orchestration, Multi-Model Routing, LLM Integration (Anthropic Claude / OpenAI), LangChain, LangGraph, ChromaDB, Claude Code</p>
+                </article>
+                <article class="lens reveal" data-focal="24mm">
+                    <div class="lens__ring"><i class='bx bx-scatter-chart'></i></div>
+                    <h3>ML Techniques</h3>
+                    <p>Classification, Regression, Clustering, Natural Language Processing, Computer Vision, Feature Engineering, Predictive Modeling, Hypothesis Testing</p>
+                </article>
+                <article class="lens reveal" data-focal="70-200">
+                    <div class="lens__ring"><i class='bx bx-layer'></i></div>
+                    <h3>Full-Stack &amp; Infrastructure</h3>
+                    <p>FastAPI, React, REST APIs, Microservices, Docker, Kubernetes, Git / CI-CD, Streamlit</p>
+                </article>
+                <article class="lens reveal" data-focal="14mm">
+                    <div class="lens__ring"><i class='bx bx-cloud'></i></div>
+                    <h3>Cloud Platforms</h3>
+                    <p>AWS (S3, Glue, Athena, Lambda, Redshift, RDS, CloudWatch, Batch), Azure (Azure ML), GCP</p>
+                </article>
+                <article class="lens reveal" data-focal="100mm">
+                    <div class="lens__ring"><i class='bx bx-data'></i></div>
+                    <h3>Data &amp; Databases</h3>
+                    <p>ETL / ELT Pipelines, PostgreSQL, MySQL, SQL Server, MongoDB, Neo4j, Snowflake, Databricks</p>
+                </article>
+                <article class="lens reveal" data-focal="Macro">
+                    <div class="lens__ring"><i class='bx bx-bar-chart-alt-2'></i></div>
+                    <h3>Data Visualization</h3>
+                    <p>Tableau, Power BI (DAX), Looker, Matplotlib, Seaborn, ArcGIS Online / Pro &amp; Dashboards, Excel</p>
+                </article>
+            </div>
+        </section>
 
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-    </body>
+        <!-- ===== EXPERIENCE / CAMERA PLAYBACK ===== -->
+        <section class="section work" id="work">
+            <header class="section__head">
+                <span class="section__num">03</span>
+                <h2 class="section__title">Exposures — <em>professional</em></h2>
+                <p class="section__sub">Four frames from the roll. Pick a frame to play it back.</p>
+            </header>
+
+            <div class="playback reveal">
+                <!-- Film strip selector -->
+                <div class="pb-strip" role="tablist" aria-label="Roles">
+                    <button class="pb-thumb active" role="tab" aria-selected="true" aria-controls="role-0" id="tab-0">
+                        <span class="pb-thumb__no">04</span>
+                        <span class="pb-thumb__role">Founding Engineer</span>
+                        <span class="pb-thumb__co">TruVana Services</span>
+                        <span class="pb-thumb__yr">2026 — Now</span>
+                    </button>
+                    <button class="pb-thumb" role="tab" aria-selected="false" aria-controls="role-1" id="tab-1">
+                        <span class="pb-thumb__no">03</span>
+                        <span class="pb-thumb__role">Data Scientist Consultant</span>
+                        <span class="pb-thumb__co">IFC · World Bank Group</span>
+                        <span class="pb-thumb__yr">2025 — 2026</span>
+                    </button>
+                    <button class="pb-thumb" role="tab" aria-selected="false" aria-controls="role-2" id="tab-2">
+                        <span class="pb-thumb__no">02</span>
+                        <span class="pb-thumb__role">Data Engineer</span>
+                        <span class="pb-thumb__co">Infosys</span>
+                        <span class="pb-thumb__yr">2022 — 2023</span>
+                    </button>
+                    <button class="pb-thumb" role="tab" aria-selected="false" aria-controls="role-3" id="tab-3">
+                        <span class="pb-thumb__no">01</span>
+                        <span class="pb-thumb__role">Junior Data Scientist</span>
+                        <span class="pb-thumb__co">Technologics</span>
+                        <span class="pb-thumb__yr">2021</span>
+                    </button>
+                </div>
+
+                <!-- LCD screen -->
+                <div class="pb-screen">
+                    <div class="pb-hud">
+                        <span><i class='bx bx-play'></i> PLAYBACK</span>
+                        <span class="pb-hud__count"><b id="pb-count">04</b>/04</span>
+                    </div>
+
+                    <article class="pb-panel active" role="tabpanel" id="role-0" aria-labelledby="tab-0">
+                        <p class="pb-date">APR 2026 — PRESENT · VIRGINIA, USA</p>
+                        <h3 class="pb-title">Founding Engineer</h3>
+                        <p class="pb-co">TruVana Services</p>
+                        <div class="pb-stats">
+                            <div><b>#1</b><span>founding technical hire</span></div>
+                            <div><b>2</b><span>clouds · AWS + Azure</span></div>
+                            <div><b>RAG</b><span>multi-agent in production</span></div>
+                        </div>
+                        <ul>
+                            <li>Own the AI/ML model-development side of a full-stack AI-powered platform built from scratch (Python FastAPI, React, MySQL), integrating LLM capabilities with Anthropic Claude and setting technical direction as a founding technical hire.</li>
+                            <li>Built multi-agent orchestration and retrieval systems (RAG, multi-model routing) using Claude and Claude Code, applying agentic AI as a core capability within a production system.</li>
+                            <li>Designed cloud infrastructure across AWS and Azure to support model training, deployment, and inference at scale, including API resilience frameworks with automated fallback mechanisms for production reliability.</li>
+                            <li>Collaborate with product and engineering stakeholders to integrate AI/ML solutions in a scalable, maintainable way while staying current on advances in generative AI.</li>
+                        </ul>
+                        <div class="pb-tags"><span>FastAPI</span><span>React</span><span>Claude</span><span>RAG</span><span>AWS</span><span>Azure</span></div>
+                    </article>
+
+                    <article class="pb-panel" role="tabpanel" id="role-1" aria-labelledby="tab-1" hidden>
+                        <p class="pb-date">MAR 2025 — MAY 2026 · WASHINGTON, DC</p>
+                        <h3 class="pb-title">Data Scientist Consultant</h3>
+                        <p class="pb-co">International Finance Corporation (IFC – World Bank Group)</p>
+                        <div class="pb-stats">
+                            <div><b>15–20%</b><span>forecast accuracy gain</span></div>
+                            <div><b>500K+</b><span>records analyzed</span></div>
+                            <div><b>12</b><span>reports · 3 markets</span></div>
+                        </div>
+                        <ul>
+                            <li>Built and validated machine learning models across 8 emerging market portfolios, improving forecast accuracy by 15–20% through iterative model training and evaluation against real-world constraints.</li>
+                            <li>Delivered data-driven investment intelligence for Malawi's tourism sector by analyzing economic indicators across 15+ regional datasets, identifying 3 high-growth corridors projected to generate 20% higher ROI.</li>
+                            <li>Conducted exploratory and inferential statistical analyses across 10+ financial and operational datasets (500K+ records), delivering 12 actionable reports across 3 Sub-Saharan African markets.</li>
+                        </ul>
+                        <div class="pb-tags"><span>Forecasting</span><span>Statistics</span><span>Python</span><span>Economics</span></div>
+                    </article>
+
+                    <article class="pb-panel" role="tabpanel" id="role-2" aria-labelledby="tab-2" hidden>
+                        <p class="pb-date">MAY 2022 — JUL 2023 · BANGALORE, INDIA</p>
+                        <h3 class="pb-title">Data Engineer</h3>
+                        <p class="pb-co">Infosys</p>
+                        <div class="pb-stats">
+                            <div><b>50K+</b><span>daily transactions</span></div>
+                            <div><b>99.5%</b><span>pipeline reliability</span></div>
+                            <div><b>~40h</b><span>saved per month</span></div>
+                        </div>
+                        <ul>
+                            <li>Built ML-powered anomaly detection models using Python (Scikit-learn, Isolation Forest) for real-time fraud pattern identification across 50K+ daily banking transactions, deploying and monitoring models in production.</li>
+                            <li>Engineered scalable ETL workflows and SQL-based analytics for banking data, processing 50K+ daily transactions with 99.5% pipeline reliability and reducing data latency by 30%.</li>
+                            <li>Developed SQL and Python automation for trend detection across 8 recurring workflows, cutting manual reporting effort by ~40 hrs/month and increasing delivery efficiency by 25%.</li>
+                            <li>Boosted client data processing capabilities by developing .NET-based microservice generators and maintaining micro frontends in an Angular environment for improved modularity.</li>
+                            <li>Employed Agile methodologies and cross-functional communication across development, QA, and project management to deliver technical solutions on schedule.</li>
+                        </ul>
+                        <p class="award"><i class='bx bx-award'></i> <strong>INSTA Award</strong> — for exceptional contributions to the improvement and ramp-up of microservices modules and API Gateways.</p>
+                        <div class="pb-tags"><span>Scikit-learn</span><span>Isolation Forest</span><span>SQL</span><span>ETL</span><span>.NET</span><span>Angular</span></div>
+                    </article>
+
+                    <article class="pb-panel" role="tabpanel" id="role-3" aria-labelledby="tab-3" hidden>
+                        <p class="pb-date">JAN 2021 — DEC 2021 · BANGALORE, INDIA</p>
+                        <h3 class="pb-title">Junior Data Scientist</h3>
+                        <p class="pb-co">Technologics</p>
+                        <div class="pb-stats">
+                            <div><b>5s→0.2s</b><span>inference speed</span></div>
+                            <div><b>25×</b><span>faster than manual</span></div>
+                            <div><b>DL</b><span>TensorFlow · Keras</span></div>
+                        </div>
+                        <ul>
+                            <li>Designed and trained supervised and deep learning models (TensorFlow, Keras), improving inference speed from 5s to 0.2s compared to manual workflows.</li>
+                            <li>Researched and analyzed cloud computing architectures and identified optimization opportunities, collaborating with cross-functional teams to implement improvements.</li>
+                            <li>Communicated complex technical findings to diverse stakeholders through comprehensive analysis and presentations.</li>
+                        </ul>
+                        <div class="pb-tags"><span>TensorFlow</span><span>Keras</span><span>Cloud</span></div>
+                    </article>
+
+                    <div class="pb-controls">
+                        <button id="pb-prev" aria-label="Previous role"><i class='bx bx-skip-previous'></i></button>
+                        <div class="pb-progress"><span id="pb-bar"></span></div>
+                        <button id="pb-next" aria-label="Next role"><i class='bx bx-skip-next'></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROJECTS / CONTACT SHEET ===== -->
+        <section class="section gallery" id="project">
+            <header class="section__head">
+                <span class="section__num">04</span>
+                <h2 class="section__title">The <em>gallery</em></h2>
+                <p class="section__sub">A contact sheet of selected work. Hover to develop the negative — click to open the print.</p>
+            </header>
+
+            <div class="sheet">
+                <button class="print reveal" data-project="0">
+                    <span class="print__no">01</span>
+                    <div class="print__img"><img src="assets/img/work3.jpg" alt=""></div>
+                    <span class="print__title">Clinical Decision Support Agent</span>
+                    <span class="print__tag">Agentic AI · RAG · 2025</span>
+                </button>
+                <button class="print reveal" data-project="1">
+                    <span class="print__no">02</span>
+                    <div class="print__img"><img src="assets/img/work2.jpg" alt=""></div>
+                    <span class="print__title">COVID-19 Inequity in NYC</span>
+                    <span class="print__tag">Geospatial · ArcGIS · 2025</span>
+                </button>
+                <button class="print reveal" data-project="2">
+                    <span class="print__no">03</span>
+                    <div class="print__img"><img src="assets/img/work1.jpg" alt=""></div>
+                    <span class="print__title">Customer Complaint Analysis</span>
+                    <span class="print__tag">NLP · Transformers · 2024</span>
+                </button>
+                <button class="print reveal" data-project="3">
+                    <span class="print__no">04</span>
+                    <div class="print__img"><img src="assets/img/Housingimage.jpg" alt=""></div>
+                    <span class="print__title">Bridging the Gap</span>
+                    <span class="print__tag">Economics · Tableau · 2024</span>
+                </button>
+                <button class="print reveal" data-project="4">
+                    <span class="print__no">05</span>
+                    <div class="print__img"><img src="assets/img/humanaction.webp" alt=""></div>
+                    <span class="print__title">Human Action Recognition</span>
+                    <span class="print__tag">Computer Vision · CNN · 2024</span>
+                </button>
+                <button class="print reveal" data-project="5">
+                    <span class="print__no">06</span>
+                    <div class="print__img"><img src="assets/img/aws.jpg" alt=""></div>
+                    <span class="print__title">AWS YouTube Analytics</span>
+                    <span class="print__tag">Data Engineering · AWS · 2024</span>
+                </button>
+                <button class="print reveal" data-project="6">
+                    <span class="print__no">07</span>
+                    <div class="print__img"><img src="assets/img/wine.jpg" alt=""></div>
+                    <span class="print__title">Wine Quality Prediction</span>
+                    <span class="print__tag">ML · R · 2023</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- ===== EDUCATION ===== -->
+        <section class="section education" id="education">
+            <header class="section__head">
+                <span class="section__num">05</span>
+                <h2 class="section__title">Where the film was <em>developed</em></h2>
+            </header>
+
+            <div class="certificate reveal">
+                <div class="certificate__stamp">GPA<br><b>3.8</b></div>
+                <p class="certificate__kicker">Master of Science · Data Science</p>
+                <h3 class="certificate__school">The George Washington University</h3>
+                <p class="certificate__meta">Washington, DC · Graduated May 2025</p>
+                <ul class="chips">
+                    <li>Machine Learning</li><li>Data Visualization</li><li>Cloud Computing</li><li>Data Warehousing</li>
+                    <li>Data Mining</li><li>Natural Language Processing</li><li>Applied Computing in Health Data</li><li>GIS</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT / SAFELIGHT ===== -->
+        <section class="section contact" id="contact">
+            <div class="safelight" aria-hidden="true"></div>
+            <header class="section__head">
+                <span class="section__num">06</span>
+                <h2 class="section__title">Let's make a <em>picture</em> together</h2>
+                <p class="section__sub">The red light is on. Step into the darkroom.</p>
+            </header>
+
+            <div class="clothesline">
+                <a class="hanging reveal" href="mailto:bhumikahorpet@gmail.com">
+                    <span class="pin"></span>
+                    <i class='bx bx-envelope'></i>
+                    <span class="hanging__label">Email</span>
+                    <span class="hanging__val">bhumikahorpet@gmail.com</span>
+                </a>
+                <a class="hanging reveal" href="tel:+15715479418">
+                    <span class="pin"></span>
+                    <i class='bx bx-phone'></i>
+                    <span class="hanging__label">Mobile</span>
+                    <span class="hanging__val">+1 (571) 547-9418</span>
+                </a>
+                <a class="hanging reveal" href="https://www.linkedin.com/in/bhumikamh/" target="_blank" rel="noopener">
+                    <span class="pin"></span>
+                    <i class='bx bxl-linkedin'></i>
+                    <span class="hanging__label">LinkedIn</span>
+                    <span class="hanging__val">/in/bhumikamh</span>
+                </a>
+                <a class="hanging reveal" href="https://github.com/bhumika-1815" target="_blank" rel="noopener">
+                    <span class="pin"></span>
+                    <i class='bx bxl-github'></i>
+                    <span class="hanging__label">GitHub</span>
+                    <span class="hanging__val">bhumika-1815</span>
+                </a>
+            </div>
+            <p class="contact__loc"><i class='bx bx-map-pin'></i> San Jose, CA</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__strip" aria-hidden="true"></div>
+        <p>END OF ROLL · 36/36 · Bhumika Mallikarjun Horapet · <span id="year"></span></p>
+    </footer>
+
+    <!-- ===== LIGHTBOX ===== -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="lightbox__panel">
+            <button class="lightbox__close" id="lb-close" aria-label="Close"><i class='bx bx-x'></i></button>
+            <div class="lightbox__img"><img id="lb-img" src="" alt=""></div>
+            <div class="lightbox__body">
+                <p class="lightbox__meta" id="lb-meta"></p>
+                <h3 id="lb-title"></h3>
+                <ul id="lb-points"></ul>
+                <a id="lb-link" class="btn btn--red" target="_blank" rel="noopener"><i class='bx bxl-github'></i> View on GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/darkroom.js"></script>
+</body>
 </html>
